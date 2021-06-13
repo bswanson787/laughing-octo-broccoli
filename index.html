@@ -1,9 +1,57 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<title>Embed PHP in a .html File</title>
+<title>Entry Form Example / Submit Page</title>
+<style>
+body  { font-family:Verdana;
+        color:maroon;
+        background-color:aliceblue; }
+input { font-family:Verdana; width:"1in"; }
+td    { text-align:center; }
+</style>
 </head>
+
 <body>
-<h1>Hello World! hey</h1>
+
+<h2>EntryForm Example / PHP Submit Page</h2>
+
+<form action="display-entry-form.php" method="post">
+<table>
+<tr>
+    <td style="text-align:right">Name</td>
+    <td><input type="text" size="10" name="name" /></td>
+</tr>
+<tr>
+    <td style="text-align:right">Zipcode</td>
+    <td><input type="text" size="10" name="zipcode" /></td>
+</tr>
+</table>
+
+<p><input type="radio" name="gender" value="Female" />Female<br />
+   <input type="radio" name="gender" value="Male" />Male</p>
+
+<p>Age
+<select name="age" />
+    <option value="18-25">18-25</option>
+    <option value="26-35">26-35</option>
+    <option value="36-45">36-45</option>
+    <option value="36-55">46-55</option>
+    <option value="Over 55">Over 55</option>
+    <option selected value="Unknown">Unknown</option>
+</select>
+</p>
+
+<p><input type="checkbox" name="student" value="yes" checked />Full time student?</p>
+
+<p>
+Comments:<br />
+<textarea rows="8" cols="35" name="comments"></txtarea>
+</p>
+
+<input type="hidden" name="hidden" value="Confidential Data" />
+<input type="submit" value="Submit Data" />
+</form>
+
 </body>
 </html>
